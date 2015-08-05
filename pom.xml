@@ -154,6 +154,7 @@
                                             <name>**/*.xsd</name>
                                         </includes>
                                     </fileSet>
+                                    <deployAsSDO>true</deployAsSDO>
                                 </deploy>
                             </session>
                         </configuration>
