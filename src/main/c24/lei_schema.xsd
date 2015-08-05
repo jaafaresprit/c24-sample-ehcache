@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <xs:schema 
+  	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	elementFormDefault="qualified" 
+	targetNamespace="http://www.p-lei.org/pre-lei_schema.xsd" 
+	xmlns:prelei="http://www.p-lei.org/pre-lei_schema.xsd">
+    
+    <xs:element name="LEIDirectory" type="prelei:LEIDirectory" />
+    
+    <xs:complexType name="LEIDirectory">
+      <xs:sequence>
+        <xs:element name="LEIRegistrations" type="prelei:LEIRegistrations"/>
+      </xs:sequence>
+      <xs:attribute name="Content" use="required" type="xs:NCName"/>
+      <xs:attribute name="PublicationDate" use="required" type="xs:dateTime"/>
+    </xs:complexType>
+    
+    <xs:complexType name="LEIRegistrations">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="LEIRegistration"
+          type="prelei:LEIRegistration"/>
+      </xs:sequence>
+    </xs:complexType>
+  
+  
+    <xs:complexType name="LEIRegistration" >
+      <xs:sequence>
+        <xs:element name="LegalEntityIdentifier" type="prelei:LEI"/>
+        <xs:element name="MappedRegisteredName" type="xs:string" minOccurs="0"/>
+        <xs:element name="RegisteredName" type="xs:string"/>
+        <xs:element name="RegisteredAddress1" type="xs:string" minOccurs="0"/>
+        <xs:element name="RegisteredAddress2" type="xs:string" minOccurs="0"/>
+        <xs:element name="RegisteredAddress3"  type="xs:string" minOccurs="0"/>
+        <xs:element name="RegisteredAddress4"  type="xs:string" minOccurs="0"/>
+        <xs:element name="RegisteredCity"  type="xs:string" minOccurs="0"/>
+        <xs:element name="RegisteredRegion"  type="xs:string" minOccurs="0"/>
+        <xs:element name="RegisteredPostalCode"  type="xs:string" minOccurs="0"/>
+        <xs:element name="RegisteredCountryCode"  type="prelei:CountryCode" minOccurs="0"/>
+        <xs:element name="HeadquarterAddress1" type="xs:string" minOccurs="0"/>
+        <xs:element name="HeadquarterAddress2" type="xs:string" minOccurs="0"/>
+        <xs:element name="HeadquarterAddress3" type="xs:string" minOccurs="0"/>
+        <xs:element name="HeadquarterAddress4" type="xs:string" minOccurs="0"/>
+        <xs:element name="HeadquarterCity" type="xs:string" minOccurs="0"/>
+        <xs:element name="HeadquarterRegion" type="xs:string" minOccurs="0"/>
+        <xs:element name="HeadquarterPostalCode" type="xs:string" minOccurs="0"/>
+        <xs:element name="HeadquarterCountryCode" type="prelei:CountryCode" minOccurs="0"/>
+        <xs:element name="LEIAssignmentDate" type="xs:dateTime" minOccurs="0" />
+        <xs:element name="LEIRecordLastUpdate" type="xs:dateTime" minOccurs="0"/>
+        <xs:element name="EntityStatusCode" type="xs:string" minOccurs="0"/>
+        <xs:element name="EntityTerminationDate" type="xs:dateTime" minOccurs="0"/>
+        <xs:element name="BusinessRegistryName" type="xs:string" minOccurs="0"/>
+        <xs:element name="BusinessRegistryIdentifier" type="xs:string" minOccurs="0"/>
+        <xs:element name="RedirectedLEI"  type="prelei:LEI" minOccurs="0"/>
+        <xs:element name="RedirectedLEIReason" type="xs:string" minOccurs="0"/>
+        <xs:element name="RedirectedLEIEffectiveDate" type="xs:dateTime" minOccurs="0"/>
+        <xs:element name="EntityLegalForm" type="xs:string" minOccurs="0"/>
+        <xs:element name="LEIStatusCode" type="xs:string"/>
+        <xs:element name="LEIExpiredDate" type="xs:dateTime" minOccurs="0"/>
+        <xs:element name="LEIExpiredReasonCode" type="xs:string" minOccurs="0"/>
+        <xs:element name="LEINextRenewalDate" type="xs:dateTime"  minOccurs="0"/>
+        <xs:element name="LEINextCertificationDate" type="xs:dateTime"  minOccurs="0"/>
+        <xs:element name="LEICertificationStatus" type="xs:string" minOccurs="0"/>
+        <xs:element name="LOUID" type="xs:string"/>
+        <xs:element name="EntityWebsiteAddress" type="xs:anyURI" minOccurs="0"/>
+        <xs:element name="LOUMappingProfile" type="xs:string" minOccurs="0"/>
+        <xs:element name="vnext" type="prelei:LEIRegistrationExtension" minOccurs="0"/>
+        <xs:element name="LOUSpecificData" type="prelei:LOUSpecificData" />
+      </xs:sequence>
+    </xs:complexType>
+    
+    
+    <xs:complexType name="LEIRegistrationExtension">
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##targetNamespace"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="LOUSpecificData">
+      <xs:sequence>
+        <xs:element name="LOUSpecificDataElements" type="prelei:LOUSpecificDataElements"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+ 
+    <xs:complexType name="LOUSpecificDataElements">
+      <xs:sequence>
+           <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>  
+       <!--   
+        <xs:element minOccurs="0" ref="gei:LegalEntity"/>
+        <xs:element minOccurs="0" ref="cici:Events"/>
+        <xs:element minOccurs="0" ref="cici:OtherNames"/>
+        <xs:element minOccurs="0" ref="cici:RelatedLEIs"/>
+        <xs:element minOccurs="0" ref="cici:RecordState"/> 
+       -->
+      </xs:sequence>
+      <xs:attribute name="ElementProfile" use="required" type="xs:NCName"/>
+    </xs:complexType>
+    
+  <xs:simpleType name="LEI">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="20"/>
+      <xs:maxLength value="20"/>
+      <xs:pattern value="([0-9A-Z]{18}[0-9]{2})"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+ <xs:simpleType name="CountryCode">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="2"/>
+      <xs:pattern value="([A-Z]{2})"/>
+    </xs:restriction>
+  </xs:simpleType>
+    
+</xs:schema>

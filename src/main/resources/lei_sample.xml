@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prelei:LEIDirectory xmlns:cici="www.leiutility.org"
+                     xmlns:prelei="http://www.p-lei.org/pre-lei_schema.xsd"
+                     Content="FULL"
+                     PublicationDate="2015-06-07T21:10:15.267-06:00">
+    <prelei:LEIRegistrations>
+        <prelei:LEIRegistration>
+            <prelei:LegalEntityIdentifier>001GPB6A9XPE8XJICC14</prelei:LegalEntityIdentifier>
+            <prelei:RegisteredName>Fidelity Advisor Series I - Fidelity Advisor Leveraged Company Stock Fund
+            </prelei:RegisteredName>
+            <prelei:RegisteredAddress1>245 Summer Street</prelei:RegisteredAddress1>
+            <prelei:RegisteredCity>Boston</prelei:RegisteredCity>
+            <prelei:RegisteredRegion>MA</prelei:RegisteredRegion>
+            <prelei:RegisteredPostalCode>02110</prelei:RegisteredPostalCode>
+            <prelei:RegisteredCountryCode>US</prelei:RegisteredCountryCode>
+            <prelei:HeadquarterAddress1>245 Summer Street</prelei:HeadquarterAddress1>
+            <prelei:HeadquarterCity>Boston</prelei:HeadquarterCity>
+            <prelei:HeadquarterRegion>MA</prelei:HeadquarterRegion>
+            <prelei:HeadquarterPostalCode>02110</prelei:HeadquarterPostalCode>
+            <prelei:HeadquarterCountryCode>US</prelei:HeadquarterCountryCode>
+            <prelei:LEIAssignmentDate>2012-11-29T16:33:38.748Z</prelei:LEIAssignmentDate>
+            <prelei:LEIRecordLastUpdate>2014-11-22T01:43:25.568Z</prelei:LEIRecordLastUpdate>
+            <prelei:EntityStatusCode>ACTIVE</prelei:EntityStatusCode>
+            <prelei:BusinessRegistryName>Not Available</prelei:BusinessRegistryName>
+            <prelei:EntityLegalForm>OTHER</prelei:EntityLegalForm>
+            <prelei:LEIStatusCode>CICI-PUBLIC_SOURCES</prelei:LEIStatusCode>
+            <prelei:LEINextRenewalDate>2015-11-20T15:17:19.023Z</prelei:LEINextRenewalDate>
+            <prelei:LEINextCertificationDate>2015-11-20T15:17:19.023Z</prelei:LEINextCertificationDate>
+            <prelei:LEICertificationStatus>CURRENT</prelei:LEICertificationStatus>
+            <prelei:LOUID>GMEI</prelei:LOUID>
+            <prelei:LOUMappingProfile>cici_default</prelei:LOUMappingProfile>
+            <prelei:LOUSpecificData>
+                <prelei:LOUSpecificDataElements ElementProfile="cici_default">
+                    <cici:Events>
+                        <cici:Event PortalDateTime="2012-11-29T16:31:57.377Z">REQUESTED</cici:Event>
+                        <cici:Event PortalDateTime="2012-11-29T16:33:38.748Z">ASSIGNED</cici:Event>
+                        <cici:Event PortalDateTime="2012-11-29T16:31:57.368Z">LAST_MAINTAINED</cici:Event>
+                        <cici:Event PortalDateTime="2014-01-01T03:08:09.666Z">REVIEWED</cici:Event>
+                        <cici:Event PortalDateTime="2014-01-01T03:08:09.667Z">LAST_MAINTAINED</cici:Event>
+                        <cici:Event PortalDateTime="2014-01-04T03:20:26.889Z">REVIEWED</cici:Event>
+                        <cici:Event PortalDateTime="2014-01-04T03:20:26.089Z">LAST_MAINTAINED</cici:Event>
+                        <cici:Event PortalDateTime="2014-08-12T01:34:07.883Z">REVIEWED</cici:Event>
+                        <cici:Event PortalDateTime="2014-11-22T01:43:25.571Z">REVIEWED</cici:Event>
+                        <cici:Event PortalDateTime="2014-11-22T01:43:25.573Z">LAST_MAINTAINED</cici:Event>
+                    </cici:Events>
+                    <cici:RelatedLEIs>
+                        <cici:RelatedLEI Type="ULTIMATE_PARENT">C7J4FOV6ELAVE39B7M82</cici:RelatedLEI>
+                    </cici:RelatedLEIs>
+                    <cici:RecordState>
+                        <cici:RecordState>PUBLIC_SOURCES</cici:RecordState>
+                    </cici:RecordState>
+                </prelei:LOUSpecificDataElements>
+            </prelei:LOUSpecificData>
+        </prelei:LEIRegistration>
+    </prelei:LEIRegistrations>
+</prelei:LEIDirectory>
