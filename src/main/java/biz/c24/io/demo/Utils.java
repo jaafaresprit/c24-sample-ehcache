@@ -48,13 +48,13 @@ public class Utils {
             idOffset = startOffset;
         }
 
-        char[] newId = String.format("%020x", id).toCharArray();
+        char[] newId = String.format("%020d", id).toCharArray();
 
         for(int i = 0; i < newId.length; i++) {
             bytes[idOffset + i] = (byte) newId[i];
         }
 
-        org.plei.prelei_schema.xsd.sdo.LEIRegistration sdo2 = new org.plei.prelei_schema.xsd.sdo.LEIRegistration(bytes, 1);
+        org.plei.prelei_schema.xsd.sdo.LEIRegistration sdo2 = new org.plei.prelei_schema.xsd.sdo.LEIRegistration(bytes, sdo.getBufferOffset());
         return sdo2;
 
 

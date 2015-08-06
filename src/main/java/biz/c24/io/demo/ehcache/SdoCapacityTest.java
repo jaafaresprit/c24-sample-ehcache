@@ -33,12 +33,6 @@ public class SdoCapacityTest implements Runnable {
                     .timeToLiveSeconds(0)
                     .timeToIdleSeconds(0);
 
-            Searchable searchable = new Searchable();
-            cacheConfig.addSearchable(searchable);
-
-            searchable.addSearchAttribute(new SearchAttribute().name("legalEntityIdentifier").expression("value.getLegalEntityIdentifier()"));
-
-
             Cache cache = new Cache(cacheConfig);
             manager.addCache(cache);
 
