@@ -44,9 +44,9 @@ public class CdoCapacityTest implements Runnable {
                 if(i % 10000 == 0) {
                     System.out.println(i);
                 }
-                if(i % 100000 == 0) {
-                    System.out.println("Heap Size (in Bytes): " + cache.getStatistics().getLocalHeapSizeInBytes());
-                }
+//                if(i % 100000 == 0) {
+//                    System.out.println("Heap Size (in Bytes): " + cache.getStatistics().getLocalHeapSizeInBytes());
+//                }
                 
             }
             

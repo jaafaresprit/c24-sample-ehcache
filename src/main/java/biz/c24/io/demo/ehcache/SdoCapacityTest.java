@@ -1,19 +1,15 @@
 package biz.c24.io.demo.ehcache;
 
-import java.io.File;
-import java.io.IOException;
-
-
 import biz.c24.io.api.C24;
 import biz.c24.io.demo.Utils;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
 import net.sf.ehcache.config.CacheConfiguration;
-import net.sf.ehcache.config.SearchAttribute;
-import net.sf.ehcache.config.Searchable;
 import net.sf.ehcache.store.MemoryStoreEvictionPolicy;
 import org.plei.prelei_schema.xsd.sdo.LEIDirectory;
+
+import java.io.File;
 
 public class SdoCapacityTest implements Runnable {
 

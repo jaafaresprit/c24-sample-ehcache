@@ -16,6 +16,8 @@ import java.io.File;
 
 public class SdoQueryTest implements Runnable {
 
+    public static final int QUERY_SIZE = 1000000;
+
     public static void main(String[] args) {
         new SdoQueryTest().run();
     }
@@ -44,7 +46,7 @@ public class SdoQueryTest implements Runnable {
             org.plei.prelei_schema.xsd.sdo.LEIDirectory sdo = C24.parse(org.plei.prelei_schema.xsd.sdo.LEIDirectory.class).from(new File("/lei_sample.xml"));
 
             int i;
-            for(i = 0; i < 1000000; i++) {
+            for(i = 0; i < QUERY_SIZE; i++) {
                 cache.put(new Element(i, Utils.cloneSdoWithIdentifier(sdo.getLEIRegistrations().getLEIRegistration(0), i)));
                 if(cache.getSize() != i+1) {
                     // We're full
@@ -57,7 +59,7 @@ public class SdoQueryTest implements Runnable {
 
             }
 
-            if(i < 1000000) {
+            if(i < QUERY_SIZE) {
                 throw new RuntimeException("Cached overflowed");
             }
 
